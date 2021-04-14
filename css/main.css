@@ -1,0 +1,106 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font: 1.6rem 'Open Sans',sans-serif;
+    margin: 0;
+
+}
+h1,
+h2,
+h3,p,ul,ol,figure{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    font-weight: 300;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+/* theme */
+header{
+    border: solid .1rem transparent;
+    background-color: #222;
+}
+header h1{
+    text-align: center;
+    color: #fff;
+    line-height: 6rem;
+}
+/* grid */
+nav ul{
+    display: grid;
+    max-width: 70rem;
+    margin:  auto;
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+nav li a{
+    display: block;
+    width: 100%;
+}
+nav li img{
+    display:block;
+    width: 100%;
+    filter: grayscale(100%);
+    clip-path: circle(50%);
+    transition: all 500ms ease-in-out;
+    
+}
+nav li:hover img{
+    filter: grayscale(0%);
+    clip-path: circle(65%);
+    
+}
+/* figure */
+figure{
+    max-width: 65rem;
+    margin: 15.0rem auto 0;
+    border: solid .1rem transparent;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+    background-color: #fff;
+   
+}
+figure img{
+    display: block;
+    width: 100%;
+}
+figure h2{
+    line-height: 5.5rem;
+    text-align: center;
+}
+figure p{
+    padding: .4rem;
+    line-height: 2.6rem;
+}
+figure p a{
+    display: inline-block;
+    color: #854900;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 5.5rem;
+}
+/* positionnement */
+.card{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+
+}
+.card:target{
+    opacity: 1;
+    z-index: 1;
+}

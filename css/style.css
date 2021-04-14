@@ -1,0 +1,101 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font: 1.6rem 'Open Sans',sans-serif;
+    margin: 0;
+
+}
+h1,
+h2,
+h3,p,ul,ol,figure{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    font-weight: 300;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+/* position fixed */
+header{
+    line-height: 6rem;
+    padding: 1rem;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:4;
+}
+header h1{
+    text-align: center;
+    color: rgb(21,230,21);
+}
+main{
+    position: relative;
+    border: solid .1rem transparent;
+    border-bottom-color: #ccc;
+    width: auto;
+    min-height: 80rem;
+    margin: 9rem auto 0;
+}
+figure{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80rem;
+    padding: 2rem;
+    background-color: #fafafa;
+    border: solid .1rem, transparent;
+    box-shadow: 0 0 1rem  rgba(0,0,0,.5);
+}
+figure img{
+    display: block;
+    max-width: 100%;
+}
+figure figcaption{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,1);
+    z-index: 2;
+}
+/* pseudo element */
+figure figcaption::before{
+    position: absolute;
+    content: '';
+    width:2rem;
+    height: 2rem;
+    background-color: rgba(255,255,255,1);
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    transform: rotate(45deg);
+
+}
+figure figcaption h2{
+    text-align: center;
+}
+figure figcaption p{
+    padding: 1rem;
+    text-align: center;
+}
+footer *{
+    text-align: center;
+    padding: 1rem 0;
+}
